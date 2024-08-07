@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post One</title>
+  
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/utilities.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body id="home">
+
+  <!-- Header Section -->
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <section class="post">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i> Posted by <strong>John Doe</strong> | June 26 2024
+      </p>
+      <img src="./image_resources/blog/blog1.jpg" alt="Blog Image">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos delectus aut obcaecati, iste ex dignissimos! Eum, perferendis nostrum! Ex vero sapiente eum minus pariatur error magnam harum repudiandae corrupti nam!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure eveniet reprehenderit nisi incidunt odio doloremque beatae optio sit? Repudiandae, a vitae error voluptatibus dolorem soluta ex quam in non nam, facilis ipsam minima odit. Reprehenderit, quos veniam et debitis culpa enim ipsum esse tenetur aperiam soluta odit nulla qui neque dignissimos? Molestias dolorem aliquid maiores dolor cum, praesentium perspiciatis.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugiat, possimus quaerat vero nemo dolorum sed? Neque quis itaque quasi deleniti consequuntur cumque, omnis placeat enim cupiditate et sunt iure sint excepturi esse minus commodi quisquam! Quia saepe rerum temporibus explicabo delectus praesentium omnis nesciunt, ut sed totam laboriosam aspernatur.</p>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>&copy; 2024 Edgeledger. All Rights Reserved</p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+    window.onscroll = function() {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+
+</body>
+</html>
